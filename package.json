@@ -1,6 +1,6 @@
 {
   "name": "datocms-plugin-deepl-translate-from-original",
-  "homepage": "https://github.com/daugsbi/datocms-plugin-deepl-translate#readme",
+  "homepage": "https://github.com/Eurac-Research/datocms-plugin-deepl-translate-from-original",
   "version": "0.0.1",
   "description": "DeepL translations for multilingual editor teams",
   "main": "index.js",
@@ -26,8 +26,8 @@
   ],
   "datoCmsPlugin": {
     "title": "DeepL translate the original",
-    "previewImage": "docs/demo.gif",
-    "coverImage": "docs/cover.jpg",
+    "previewImage": "docs/preview.png",
+    "coverImage": "docs/cover.png",
     "entryPoint": "dist/index.html",
     "pluginType": "field_addon",
     "fieldTypes": [

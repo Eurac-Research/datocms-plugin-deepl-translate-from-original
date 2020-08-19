@@ -1,0 +1,91 @@
+{
+  "name": "datocms-plugin-deepl-translate-from-original",
+  "homepage": "https://github.com/daugsbi/datocms-plugin-deepl-translate#readme",
+  "version": "0.0.1",
+  "description": "DeepL translations for multilingual editor teams",
+  "main": "index.js",
+  "author": "thomas iacopino <thomas.iacopino@eurac.edu>",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn dev",
+    "dev": "NODE_ENV=development webpack-dev-server --port 5000",
+    "dist": "NODE_ENV=production webpack --progress",
+    "prepublishOnly": "rimraf lib dist && mkdir dist && yarn dist",
+    "lint": "eslint \"./src/*.{js,jsx}\"",
+    "test": "echo 1"
+  },
+  "files": [
+    "docs",
+    "dist"
+  ],
+  "keywords": [
+    "datocms",
+    "datocms-plugin",
+    "field-addon",
+    "translate"
+  ],
+  "datoCmsPlugin": {
+    "title": "DeepL translate the original",
+    "previewImage": "docs/demo.gif",
+    "coverImage": "docs/cover.jpg",
+    "entryPoint": "dist/index.html",
+    "pluginType": "field_addon",
+    "fieldTypes": [
+      "string",
+      "text"
+    ],
+    "parameters": {
+      "global": [
+        {
+          "id": "developmentMode",
+          "label": "Development mode?",
+          "type": "boolean",
+          "hint": "Enable development logs on the console"
+        },
+        {
+          "id": "deepLAuthenticationKey",
+          "label": "DeepL Autentication Key",
+          "type": "string",
+          "required": true,
+          "hint": "The DeepL Authentication Key to use (see https://www.deepl.com/docs-api/accessing-the-api/authentication)",
+          "default": "df4385c2-33de-e423-4134-ca1f7b3ea8b7"
+        }
+      ],
+      "instance": []
+    }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/register": "^7.8.6",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "14.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-import": "^2.20.1",
+    "generator-datocms-plugin": "^1.0.20",
+    "html-webpack-include-assets-plugin": "^2.0.0",
+    "html-webpack-inline-source-plugin": "^0.0.10",
+    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-tags-plugin": "^2.0.17",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.13",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "yo": "^3.1.1"
+  },
+  "dependencies": {
+    "debounce": "^1.2.0",
+    "eslint-import-resolver-webpack": "^0.12.1",
+    "marked": "^0.8.2",
+    "to-querystring": "^1.1.0",
+    "turndown": "^6.0.0"
+  }
+}

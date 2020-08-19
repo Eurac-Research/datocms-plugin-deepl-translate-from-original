@@ -12,7 +12,7 @@ The plugin allows to translate your original content into all other languages wi
 
 Please specify your [DeepL API key](https://www.deepl.com/en/docs-api/) on the plugin global settings:
 
-![Demo](https://github.com/Eurac-Research/datocms-plugin-deepl-translate-from-original/docs/settings.png)
+![Settings](./docs/settings.png)
 
 The plugin is based on the [DatoCMS Deepl plugin](https://github.com/daugsbi/datocms-plugin-deepl-translate),
 and the [DatoCMS Yandex plugin](https://github.com/datocms/plugins/tree/master/yandex-translate).

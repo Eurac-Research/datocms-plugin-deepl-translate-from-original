@@ -2,7 +2,7 @@
   "name": "datocms-plugin-deepl-translate-from-original",
   "homepage": "https://github.com/Eurac-Research/datocms-plugin-deepl-translate-from-original",
   "version": "0.0.1",
-  "description": "DeepL translations for multilingual editor teams",
+  "description": "DeepL translations for multilingual editorial teams",
   "main": "index.js",
   "author": "thomas iacopino <thomas.iacopino@eurac.edu>",
   "license": "MIT",

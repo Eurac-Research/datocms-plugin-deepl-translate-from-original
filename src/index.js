@@ -43,9 +43,6 @@ window.DatoCmsPlugin.init(plugin => {
           new RegExp(`\\.${plugin.locale}$`),
           `.${locale}`
         );
-        console.log(path);
-        console.log(locale);
-        console.log(plugin.locale);
 
         if (!text) {
           plugin.setFieldValue(path, "");

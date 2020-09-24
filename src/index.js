@@ -23,7 +23,7 @@ window.DatoCmsPlugin.init(plugin => {
 
   plugin.startAutoResizer();
 
-  if (currentLocale === itemOriginalLocale && isLocalized) {
+  if (currentLocale === itemOriginalLocale) {
     document.body.appendChild(link);
   }
 
@@ -40,7 +40,7 @@ window.DatoCmsPlugin.init(plugin => {
     Promise.all(
       localesToTranslate.map(locale => {
         const path = fieldPath.replace(
-          new RegExp(`\\.${plugin.locale}$`),
+          new RegExp(`\\.${plugin.locale}`),
           `.${locale}`
         );
 
@@ -63,7 +63,7 @@ window.DatoCmsPlugin.init(plugin => {
         });
 
         if (plugin.parameters.global.developmentMode) {
-          console.log(`Fetching '${locale}' translation for '${text}'`);
+          console.log(`Fetching '${locale}' translation for '${text}' and write to path '${path}'`);
         }
 
         return fetch(`https://api.deepl.com/v2/translate?${qs}`)
@@ -84,7 +84,7 @@ window.DatoCmsPlugin.init(plugin => {
 
   link.addEventListener("click", e => {
     e.preventDefault();
-    if (currentLocale === itemOriginalLocale && isLocalized) {
+    if (currentLocale === itemOriginalLocale) {
       link.textContent = "Translating...";
 
       const { attributes: field } = plugin.field;

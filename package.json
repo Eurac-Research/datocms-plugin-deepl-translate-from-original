@@ -9,7 +9,6 @@
   "scripts": {
     "start": "yarn dev",
     "dev": "NODE_ENV=development webpack-dev-server --port 5000",
-    "addToProject": "yo datocms-plugin:add-to-project",
     "dist": "NODE_ENV=production webpack --progress",
     "prepublishOnly": "rimraf lib dist && mkdir dist && yarn dist",
     "lint": "eslint \"./src/*.{js,jsx}\"",
@@ -26,13 +25,14 @@
     "translate"
   ],
   "datoCmsPlugin": {
-    "title": "COPY AND TRANSLATE PRIVATE",
+    "title": "DeepL translate the original",
     "previewImage": "docs/preview.png",
     "coverImage": "docs/cover.png",
     "entryPoint": "dist/index.html",
     "pluginType": "field_addon",
     "fieldTypes": [
-      "string"
+      "string",
+      "text"
     ],
     "parameters": {
       "global": [
@@ -48,7 +48,7 @@
           "type": "string",
           "required": true,
           "hint": "The DeepL Authentication Key to use (see https://www.deepl.com/docs-api/accessing-the-api/authentication)",
-          "default": "04e181b4-63db-1020-603a-334e36b60602"
+          "default": "df4385c2-33de-e423-4134-ca1f7b3ea8b7"
         }
       ],
       "instance": []
@@ -85,7 +85,6 @@
     "debounce": "^1.2.0",
     "eslint-import-resolver-webpack": "^0.12.1",
     "marked": "^0.8.2",
-    "regenerator": "^0.14.7",
     "to-querystring": "^1.1.0",
     "turndown": "^6.0.0"
   }
